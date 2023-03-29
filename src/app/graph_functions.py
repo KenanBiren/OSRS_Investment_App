@@ -113,7 +113,7 @@ def make_plot(group_id, mode, interval, timeframe, outliers, plot_type):
 
     # catch if group doesn't exist
     if os.path.isfile('data/groups/' + group_id) is False:
-        print('Group with id' + group_id + 'does not exist')
+        print('Group with id ' + group_id + ' does not exist')
         return
     df = pd.read_csv(path)
     df.rename(columns={df.columns[0]: 'timestamp'}, inplace=True)
