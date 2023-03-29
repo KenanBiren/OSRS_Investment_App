@@ -10,4 +10,4 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY src/app .
 
-CMD [ "python3", "src/app/run_test_groups.py"]
+CMD [ "python3", "app.py"]
