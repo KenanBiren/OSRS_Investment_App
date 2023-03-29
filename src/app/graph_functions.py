@@ -112,7 +112,7 @@ def make_plot(group_id, mode, interval, timeframe, outliers, plot_type):
         print('Valid mode not given. Input [p] to use price data or [v] to use volume data')
 
     # catch if group doesn't exist
-    if os.path.isfile('data/groups/' + group_id) is False:
+    if os.path.isdir('data/groups/' + group_id) is False:
         print('Group with id ' + group_id + ' does not exist')
         return
     df = pd.read_csv(path)
