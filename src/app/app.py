@@ -17,10 +17,10 @@ def prompt():
         if resp == 'g': # create graph (parameters: raw vs relative, price vs volume, timeframe, % outliers to mark)
             sel_resp = input('Input group id:')
             mode_resp = input('Analyze Price [p] or Volume [v]: ')
-            ti_resp = input('Input time interval [1h] or [6h]:')
-            tf_resp = input('Input timeframe (number of days or [max]):')
-            outl_resp = input('Percentage of outliers to mark:')
-            anls_op = input('Select Analysis Type. Options: raw, relative') # 'raw' or 'relative'
+            ti_resp = input('Input time interval [1h] or [6h]: ')
+            tf_resp = input('Input timeframe (number of days or [max]): ')
+            outl_resp = input('Percentage of outliers to mark: ')
+            anls_op = input('Select Analysis Type. Options: raw, relative: ') # 'raw' or 'relative'
             graph_functions.make_plot(sel_resp, mode_resp, ti_resp, tf_resp, outl_resp, anls_op)
             if anls_op == 'raw':
                 timestamp = int(time.time())
