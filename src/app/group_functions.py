@@ -23,7 +23,7 @@ def create_group(name_list, mapping, group_id):
     new_group = True
     if len(name_list) != 0:
         try:
-            os.makedirs('data/groups/' + group_id)
+            os.mkdir('data/groups/' + group_id)
         except FileExistsError:
             new_group = False
 
