@@ -1,0 +1,53 @@
+
+/PROD
+
+
+/remove old docker image
+docker image rm kenanbiren/osrs_investment_app:app_prod -f
+
+/remove unused docker containers (removes ALL)
+docker container prune -f                                   
+
+/pull new docker image 
+docker pull kenanbiren/osrs_investment_app:app_prod
+
+/run container from new docker image
+docker run -v osrs_investment_app_vol:/osrs_investment_app/src/app -it kenanbiren/osrs_investment_app:app_prod
+
+
+
+
+
+
+
+
+
+
+/TEST
+
+
+/remove old docker image
+docker image rm kenanbiren/osrs_investment_app:app_test -f
+
+/remove unused docker containers (removes ALL)
+docker container prune -f                                   
+
+/pull new docker image 
+docker pull kenanbiren/osrs_investment_app:app_test
+
+/run container from new docker image
+docker run -v osrs_investment_app_vol:/osrs_investment_app/src/app -it kenanbiren/osrs_investment_app:app_test
+
+
+
+
+
+
+
+
+
+
+
+docker build -f build/test/Dockerfile .
+
+docker run -v osrs_investment_app_vol:/src/app -it app_test:latest

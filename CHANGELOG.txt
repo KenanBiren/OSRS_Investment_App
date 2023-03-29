@@ -1,0 +1,9 @@
+FORMAT:
+
+New Version Number: vX.X.X
+Date, Time: YYYY-MM-DD HHmm timezone
+Author: name
+Title: (MAJOR/MINOR/BUGFIX) title
+Description: detailed description of changes
+--------------------------------------------------------------------------------
+
