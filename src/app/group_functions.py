@@ -41,7 +41,7 @@ def update_group_data(group_id_dict, group_id):
     for interval in ('1h', '6h'): # for both 1 hour and 6 hour intervals
         url = 'https://prices.runescape.wiki/api/v1/osrs/timeseries?timestep=' + interval + '&id='
         for id in group_id_dict.keys():
-            time.sleep(2)
+            time.sleep(1)
             timestamp_list = []
             price_list = []
             vol_list = []
